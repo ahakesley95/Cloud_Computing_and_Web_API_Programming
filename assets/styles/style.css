@@ -1,0 +1,346 @@
+/* page layout */
+html {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    color:black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(250, 250, 250);
+}
+
+h3, h4 {
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+#contentBody {
+    height:max-content;
+    align-items:center;
+    min-width: 90vw;
+    max-width: 90vw;
+    margin: 0 auto;
+    flex-grow: 1;
+    background-color: white;
+}
+
+#left-col {
+    flex: 60%;
+    padding: 10px;
+}
+
+#right-col {
+    flex: 40%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#col {
+    padding: 20px;
+    flex: 100%;
+}
+/*  end of page layout */
+
+
+/* header */
+header {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background-color:rgb(50,50,50);
+    color: white;
+    padding: 0 10%;
+}
+
+nav {
+    width: 80vw;
+    padding:0;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    text-align:right;
+    padding:0;
+    margin:0;
+}
+
+nav li a:hover {
+    background-color: rgb(70, 70, 70);
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a, nav li a:visited {
+    color: white;
+    line-height:40px;
+    height:40px;
+    padding: 20px 10px;
+    text-decoration:none;
+}
+/* end of header */
+
+
+
+
+/*  footer  */
+footer {
+    border: 1px solid black;
+    color: black;
+    background-color: rgb(50,50,50);
+    color:white;
+    width:100%;
+    padding: 15px;
+    margin: 0;
+}
+
+footer h3 {
+    text-align:center;
+}
+
+footer p {
+    text-align:center;
+    font-size:14px;
+}
+/* end of footer */
+
+#about-container {
+    margin-bottom: 20px;
+    padding: 10px
+}
+
+
+
+/* maps */
+#map-container {
+    padding: 10px;
+}
+
+#map {
+    height: 50vh;
+}
+/*  end of maps */
+
+
+
+
+/*  twitter  */
+#twitter-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#twitter-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#twitter-header > img {
+    width: 48px;
+    height: 48px;
+}
+
+/*  twitter - post */
+#tweet-post {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    border: 1px solid lightgrey;
+}
+
+#tweet-textarea {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    resize: none;
+    padding: 10px;
+}
+
+#tweet-textarea::placeholder, #tweet-textarea {
+    font-size: 16pt;
+}
+
+#post-tweet {
+    background-color: #1D9BF0;
+    color: white;
+    width: 100px;
+    height: 50px;
+    opacity: 0.5;
+    cursor: pointer;
+    border: none;
+    align-self:flex-end;
+    margin: auto 10px 10px auto;
+    border-radius: 10px;
+}
+/*  end of twitter - post */
+
+#tweet-feed {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 500px;
+}
+
+.tweet-li {
+    text-decoration: none;
+    padding: 10px 0;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+}
+
+.tweet-user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5px;
+}
+
+.tweet-user-info img {
+    align-self:flex-start;
+    margin-right: 5px;
+}
+
+.tweet-user-names h2 {
+    font-size: 16pt;
+    font-weight: 400;
+}
+
+.geo-data {
+    text-align: right;
+    font-size: 12pt;
+    color: #7d7e7f;
+    margin: 0;
+    padding: 0;
+}
+
+.tweet-user-names {
+    flex-grow: 1;
+    text-align: start;
+}
+
+.tweet-user-names h2, .tweet-user-names h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.tweet-user-names h4 {
+    font-weight:300;
+    color:rgb(150, 150, 150);
+}
+
+.tweet-content {
+    margin: 0;
+    padding: 0;
+}
+/*  end of twitter */
+
+
+
+/*  weather  */
+#weather-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#weather-info h2 {
+    font-weight: 200;
+    font-size: 36pt;
+}
+
+#weather-info h3 {
+    font-weight: 200;
+    font-size: 20pt;
+    margin-top: -5px;
+}
+
+#weather-info h5 {
+    color:rgb(150, 150, 150);
+}
+
+#weather-info-weather {
+    margin-bottom: 5px;
+}
+
+#weather-info-weather *, #weather-info-location * {
+    margin: 0;
+    padding: 0;
+    text-align: end;
+}
+
+#weather-icon {
+    height: 108px;
+    margin: auto 0;
+}
+
+/* end of weather */
+
+
+
+/*  about page */
+#weather-credits {
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.weather-images {
+    display: grid;
+    grid-template-columns: repeat(7, 100px);
+    grid-template-rows: repeat(2, 100px);
+    column-gap: 25px;
+    row-gap: 25px;
+}
+
+.weather-images img {
+    width: 100px;
+    height: 100px;
+}
+
+#climate-change-credits{
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.climate-change-images {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: auto;
+    column-gap: 25px;
+    row-gap: 25px;
+}
+
+.climate-change-images img {
+    width: 100px;
+    height: 100px;
+}
+
+#twitter-credits {
+    padding: 10px;
+}
+
+.twitter-images img {
+    width: 100px;
+    height: 100px;
+}
